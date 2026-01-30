@@ -308,18 +308,24 @@
       }
     ]
   },
-  "tecnologias": {
+    "tecnologias": {
     "desarrolloWeb": {
-      "lenguajes": ["HTML5", "CSS3", "Javascript", "Php", "Ajax"],
-      "frameworks": ["BootStrap", "JQuery", "Wordpress"],
-      "aplicacionesWeb": ["Wordpress", "Prestashop", "Woocommerce", "Drupal"],
-      "apis": ["Google Maps", "APIS HTML 5 Javascript", "Youtube"]
+      "lenguajes": ["HTML5", "CSS3", "JavaScript", "TypeScript", "PHP", "SQL"],
+      "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "JQuery", "WordPress"],
+      "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash"],
+      "aplicacionesWeb": ["WordPress", "Prestashop", "Woocommerce", "Drupal"],
+      "apis": ["Google Maps", "APIs HTML5 JavaScript", "YouTube", "REST APIs", "GraphQL"],
+      "baseDatos": ["PostgreSQL", "MySQL", "MongoDB"],
+      "despliegue": ["Vercel", "Netlify", "GitHub Pages", "Docker"],
+      "testing": ["Jest", "Cypress", "Testing Library"],
+      "seguridad": ["JWT", "OAuth", "HTTPS", "CORS"],
+      "ia": ["GitHub Copilot", "ChatGPT", "Code Assistant"]
     },
     "expresionAudiovisual": {
-      "imagenRaster": ["Phostoshop", "Gimp", "Pixlr"],
-      "imagenVectorial": ["Adobe Ilustrator", "Corel Draw"],
-      "maquetacion": ["Adobe Indesign", "Quark XPress"],
-      "video": ["Adobe Premiere", "After Effects"]
+      "imagenRaster": ["Photoshop", "Gimp", "Pixlr", "Figma"],
+      "imagenVectorial": ["Adobe Illustrator", "Corel Draw", "Figma"],
+      "maquetacion": ["Adobe InDesign", "Quark XPress"],
+      "video": ["Adobe Premiere", "After Effects", "DaVinci Resolve"]
     }
   },
   "redes": {
