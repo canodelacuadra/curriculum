@@ -1,0 +1,310 @@
+{
+  "personal": {
+    "nombre": "José Antonio Cano de la Cuadra",
+    "titulo": "Curriculum Vitae",
+    "foto": {
+      "src": "img/jose-cano.jpg",
+      "alt": "Foto de José Antonio Cano"
+    },
+    "direccion": {
+      "calle": "C/ Labradores 8",
+      "ciudad": "45516. La Puebla de Montalbán",
+      "movil": "600 255 567"
+    },
+    "contacto": {
+      "email": "canodelacuadra@gmail.com",
+      "lugarNacimiento": "La Puebla de Montalbán",
+      "fechaNacimiento": "17/07/1966"
+    }
+  },
+  "formacion": [
+    {
+      "fecha": "1984-1989",
+      "estudios": "Licenciado en Ciencias de la Información",
+      "institucion": "Universidad Complutense de Madrid",
+      "observaciones": "Especialidad Audiovisual"
+    },
+    {
+      "fecha": "2010",
+      "estudios": "Certficado de Profesionalidad: Formador Ocupacional",
+      "institucion": "Fedeto",
+      "observaciones": "Titulo oficial avalado por el Ministerio de Empleo y Economía"
+    },
+    {
+      "fecha": "2019",
+      "estudios": "ELABORACION DE CONTENIDOS FORMATIVOS PARA TELEFORMACIÓN( E-LEARNING)",
+      "institucion": "Forem CLM",
+      "observaciones": "60 horas"
+    }
+  ],
+  "experiencia": {
+    "formadorOcupacional": [
+      {
+        "fecha": "2021-2022",
+        "horas": "590",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
+        "empresa": "Atperson",
+        "observaciones": "Cuenca, Diciembre 2021 - Abril de 2022"
+      },
+      {
+        "fecha": "2021",
+        "horas": "590",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
+        "empresa": "Centro Colón",
+        "observaciones": "Fuenlabrada, Madrid Mayo - Noviembre"
+      },
+      {
+        "fecha": "2020",
+        "horas": "590",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
+        "empresa": "Ayla Diseño y Tecnología",
+        "observaciones": "Guadalajara Marzo - 16 de Nomviembre"
+      },
+      {
+        "fecha": "2019",
+        "horas": "300",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
+        "empresa": "Centro de Formación Hinarejos",
+        "observaciones": "Módulos II y III Villarrobledo, Albacete Mayo - 9 de Agosto"
+      },
+      {
+        "fecha": "2019",
+        "horas": "590",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
+        "empresa": "Lopez Santiago Consultores",
+        "observaciones": "Certificado Completo San Martín de Valdeiglesias, Madrid. Diciembre 2018 a Mayo de 2019"
+      },
+      {
+        "fecha": "2018",
+        "horas": "110",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
+        "empresa": "Ayuntamiento de Villarrobledo",
+        "observaciones": "Villarrobledo, Octubre y Noviembre de 2018"
+      },
+      {
+        "fecha": "2018",
+        "horas": "60",
+        "cargo": "Profesor",
+        "descripcion": "Autoedición de imágenes digitales y vídeo",
+        "empresa": "Ymca, Toledo",
+        "observaciones": "Toledo, Julio de 2017"
+      },
+      {
+        "fecha": "2018",
+        "horas": "560",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
+        "empresa": "Forca, Nuevos Retos de Futuro",
+        "observaciones": "Torrijos 14Junio - 13 De Diciembre"
+      },
+      {
+        "fecha": "2017",
+        "horas": "300",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
+        "empresa": "Academia Arma - Talavera de la Reina",
+        "observaciones": "Modulo I y II 26 Diciembre 2016 - 31 de Marzo 2017"
+      },
+      {
+        "fecha": "2016",
+        "horas": "560",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
+        "empresa": "Diputación de Toledo",
+        "observaciones": "Taller de Empleo Torrijos 3.0 Mayo - 31 de Octubre"
+      },
+      {
+        "fecha": "2016",
+        "horas": "280",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
+        "empresa": "Infobit",
+        "observaciones": "Módulo II y III Febrero-Abril"
+      },
+      {
+        "fecha": "2015",
+        "horas": "300",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Desarrollo de Aplicaciones con Tecnologías Web",
+        "empresa": "Unitel",
+        "observaciones": "Módulo II y III(PHP, MySQL,Ajax, Wordpress, Prestashop, Joomla...):Enero-Abril"
+      },
+      {
+        "fecha": "2014",
+        "horas": "180",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de Páginas webs",
+        "empresa": "Virtual Knowledge",
+        "observaciones": "Módulo II(creación de web con javascript):Julio-Septiembre"
+      },
+      {
+        "fecha": "2014",
+        "horas": "510",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Desarrollo de aplicaciones con Tecnologías Web",
+        "empresa": "Centro de Formación Autoescuela Stylo",
+        "observaciones": "Curso completo:Marzo, Agosto 2014"
+      },
+      {
+        "fecha": "2014",
+        "horas": "30",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Actividades Administrativas relacionadas con la Atención al Cliente",
+        "empresa": "Virtual Knowledge",
+        "observaciones": "-"
+      },
+      {
+        "fecha": "2013",
+        "horas": "270",
+        "cargo": "Profesor",
+        "descripcion": "Certificado de Profesionalidad: Confección y Publicación de Páginas webs",
+        "empresa": "Virtual Knowledge",
+        "observaciones": "Módulos II y III del Certificado: Confección de páginas webs con lenguajes de guión, y publicación de páginas web"
+      }
+    ],
+    "profesorUniversitario": [
+      {
+        "fecha": "1993-1997",
+        "duracion": "4 años académicos",
+        "cargo": "Profesor Titular",
+        "descripcion": "Teoría y Técnica de la Realización II. Asignatura de 3º de Licenciatura de Comunicación Audiovisual",
+        "empresa": "CEU San Pablo, Valencia",
+        "observaciones": "Teoría y Taller de expresión audiovisual en Televisión"
+      }
+    ],
+    "profesorFP": [
+      {
+        "fecha": "1991-1993",
+        "duracion": "2 años académicos",
+        "cargo": "Profesor titular",
+        "descripcion": "Teoría y Técnica de la Imagen. Asignaturas de FPII de la especialidad de Comuniación Audiovisual",
+        "empresa": "Juan Comenius, Valencia",
+        "observaciones": "Vídeo, Cine, Fotografía"
+      }
+    ],
+    "desarrolloWeb": [
+      {
+        "fecha": "2007-Actualidad",
+        "cargo": "Desarrollo Web",
+        "descripcion": "Creación de webs para múltiples y diferentes clientes",
+        "empresa": "FreeLance",
+        "observaciones": "Webs estáticas y dinámicas sobre las más variadas plataformas (wordpress, prestashop, moodle...)"
+      },
+      {
+        "fecha": "2007-Diciembre 2016",
+        "cargo": "Responsable Web",
+        "descripcion": "Creación y mantenimiento de las Webs Municipales",
+        "empresa": "Ayuntamiento de La Puebla de Montalbán",
+        "observaciones": "Todo tipo de trabajos incluyendo la incorporación de contenidos a las diferentes redes"
+      }
+    ],
+    "disenoGrafico": [
+      {
+        "fecha": "2013",
+        "cargo": "Diseñador Gráfico",
+        "descripcion": "Artes Finales para Imprenta y Diseño Gráfico",
+        "empresa": "Tecnigraf, Talavera de la Reina",
+        "observaciones": "Realizo todo tipo de diseños para imprenta y web"
+      },
+      {
+        "fecha": "2007-2010",
+        "cargo": "Diseñador Gráfico, Arte Finalista",
+        "descripcion": "Artes Finales para Imprenta y Diseño Gráfico",
+        "empresa": "Maosprint",
+        "observaciones": "Realizo todo tipo de diseños para imprenta y web"
+      }
+    ],
+    "audiovisual": [
+      {
+        "fecha": "2013-2014",
+        "cargo": "Realizador",
+        "descripcion": "Video Industrial Granjas Avícolas",
+        "empresa": "Symaga",
+        "observaciones": "Video en inglés, español y ruso"
+      },
+      {
+        "fecha": "2002",
+        "cargo": "Realizador",
+        "descripcion": "Programa Crónicas de la Transición",
+        "empresa": "El Mundo TV",
+        "observaciones": "Realización en exteriores postproducción y grafismo"
+      },
+      {
+        "fecha": "1998-2001",
+        "cargo": "Realizador",
+        "descripcion": "Realización de Concursos, promociones, reportajes...",
+        "empresa": "RTVV, Radio Televisión Valenciana",
+        "observaciones": "Trabajo tanto en producción propia como externa para la televisión pública valenciana"
+      }
+    ]
+  },
+  "tecnologias": {
+    "desarrolloWeb": {
+      "lenguajes": ["HTML5", "CSS3", "Javascript", "Php", "Ajax"],
+      "frameworks": ["BootStrap", "JQuery", "Wordpress"],
+      "aplicacionesWeb": ["Wordpress", "Prestashop", "Woocommerce", "Drupal"],
+      "apis": ["Google Maps", "APIS HTML 5 Javascript", "Youtube"]
+    },
+    "expresionAudiovisual": {
+      "imagenRaster": ["Phostoshop", "Gimp", "Pixlr"],
+      "imagenVectorial": ["Adobe Ilustrator", "Corel Draw"],
+      "maquetacion": ["Adobe Indesign", "Quark XPress"],
+      "video": ["Adobe Premiere", "After Effects"]
+    }
+  },
+  "redes": {
+    "github": "https://github.com/canodelacuadra",
+    "youtube": "https://www.youtube.com/user/canodelacuadra/",
+    "linkedin": "https://www.linkedin.com/in/canodelacuadra",
+    "twitter": "https://twitter.com/canodelacuadra",
+    "wordpress": "http://creandowebdesdetoledo.wordpress.com/"
+  },
+  "blogroll": [
+    {
+      "nombre": "codePen",
+      "url": "http://codepen.io/"
+    },
+    {
+      "nombre": "cssTricks",
+      "url": "http://css-tricks.com/"
+    },
+    {
+      "nombre": "hml5Rocks",
+      "url": "http://www.html5rocks.com/es/"
+    },
+    {
+      "nombre": "leaVerou",
+      "url": "http://lea.verou.me/"
+    },
+    {
+      "nombre": "MDN",
+      "url": "https://developer.mozilla.org/es/"
+    },
+    {
+      "nombre": "HTML5Boilerplate",
+      "url": "http://html5boilerplate.com/"
+    },
+    {
+      "nombre": "stackOverflow",
+      "url": "http://stackoverflow.com/"
+    },
+    {
+      "nombre": "coDrops",
+      "url": "http://tympanus.net/codrops/"
+    },
+    {
+      "nombre": "smashingMagazine",
+      "url": "http://www.smashingmagazine.com/"
+    },
+    {
+      "nombre": "gamarod",
+      "url": "http://www.gamarod.com.ar"
+    }
+  ]
+}

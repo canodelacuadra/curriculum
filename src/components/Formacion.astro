@@ -1,0 +1,104 @@
+---
+import curriculumData from '../content/curriculum.json';
+
+const { formacion } = curriculumData as any;
+---
+
+<section id="formacion" class="mb-16 scroll-mt-24">
+  <div class="animate-fade-in-up">
+    <!-- Título de la sección -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+        <svg class="inline-block w-8 h-8 mr-2 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+        </svg>
+        Formación
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto rounded-full"></div>
+    </div>
+
+    <!-- Tabla de formación -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+            <tr>
+              <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                Fecha
+              </th>
+              <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+                Estudios
+              </th>
+              <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                <svg class="inline-block w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+                Institución
+              </th>
+              <th class="px-6 py-4 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                Observaciones
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+            {formacion.map((item: any, index: number) => (
+              <tr 
+                key={index}
+                class="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors duration-200 animate-fade-in-left"
+                style={`animation-delay: ${index * 0.1}s`}
+              >
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <span class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                    {item.fecha}
+                  </span>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm text-gray-900 dark:text-gray-100">
+                    {item.estudios}
+                  </span>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm text-gray-900 dark:text-gray-100">
+                    {item.institucion}
+                  </span>
+                </td>
+                <td class="px-6 py-4">
+                  <span class="text-sm text-gray-600 dark:text-gray-400">
+                    {item.observaciones}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Estadísticas educativas -->
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-4 rounded-lg text-center border border-blue-200 dark:border-blue-800 animate-fade-in-up" style="animation-delay: 0.2s">
+        <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{formacion.length}</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Títulos/Cursos</div>
+      </div>
+      <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-4 rounded-lg text-center border border-green-200 dark:border-green-800 animate-fade-in-up" style="animation-delay: 0.3s">
+        <div class="text-2xl font-bold text-green-600 dark:text-green-400">5</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Años Académicos</div>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-lg text-center border border-purple-200 dark:border-purple-800 animate-fade-in-up" style="animation-delay: 0.4s">
+        <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">60</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Horas E-learning</div>
+      </div>
+      <div class="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 p-4 rounded-lg text-center border border-yellow-200 dark:border-yellow-800 animate-fade-in-up" style="animation-delay: 0.5s">
+        <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">UCM</div>
+        <div class="text-sm text-gray-600 dark:text-gray-400">Universidad</div>
+      </div>
+    </div>
+  </div>
+</section>
