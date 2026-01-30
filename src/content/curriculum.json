@@ -57,12 +57,52 @@
     {
       "fecha": "2024",
       "estudios": "Inglés básico",
-      "institucion": "Centro de Formación",
+      "institucion": "Academia Santa Clara",
       "observaciones": "120 horas"
     }
   ],
   "experiencia": {
     "formadorOcupacional": [
+      {
+        "fecha": "2025",
+        "horas": "480",
+        "cargo": "Profesor",
+        "descripcion": "DAW y MULTIMEDIA INTERACTIVA",
+        "empresa": "Grupo CDM-Alcorcón",
+        "observaciones": "Alcorcón, 4/12/2025"
+      },
+      {
+        "fecha": "2025",
+        "horas": "510",
+        "cargo": "Profesor",
+        "descripcion": "DAW MERN (aula virtual, teletrabajo)",
+        "empresa": "Grupo Aspasia-Adalid",
+        "observaciones": "Madrid, 7/5/2025"
+      },
+      {
+        "fecha": "2024",
+        "horas": "330",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo Avanzado Web (React y Figma)",
+        "empresa": "Patrimonio Nacional",
+        "observaciones": "Aranjuez, 30/9/2024"
+      },
+      {
+        "fecha": "2024",
+        "horas": "510",
+        "cargo": "Profesor",
+        "descripcion": "Desarrollo de Aplicaciones con Tecnologías Web",
+        "empresa": "Patrimonio Nacional",
+        "observaciones": "Aranjuez, 18/5/2024"
+      },
+      {
+        "fecha": "2023",
+        "horas": "160",
+        "cargo": "Profesor",
+        "descripcion": "Cursos de Iniciación informática mujerCLM",
+        "empresa": "UTE Talavera (Forplan...)",
+        "observaciones": "Pueblos de Toledo, 29/03/2023"
+      },
       {
         "fecha": "2021-2022",
         "horas": "590",
