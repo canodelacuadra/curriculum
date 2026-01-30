@@ -309,7 +309,7 @@
     ]
   },
     "tecnologias": {
-    "desarrolloWeb": {
+      "desarrolloWeb": {
       "lenguajes": ["HTML5", "CSS3", "JavaScript", "TypeScript", "PHP", "SQL"],
       "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "JQuery", "WordPress"],
       "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash"],

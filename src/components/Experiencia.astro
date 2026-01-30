@@ -181,28 +181,6 @@ const tabScript = `
                 </tbody>
               </table>
             </div>
-
-            <!-- Estadísticas de esta categoría -->
-            <div class="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4">
-              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-3 rounded-lg text-center border border-blue-200 dark:border-blue-800">
-                <div class="text-xl font-bold text-blue-600 dark:text-blue-400">{tab.data.length}</div>
-                <div class="text-xs text-gray-600 dark:text-gray-400">Posiciones</div>
-              </div>
-              <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-3 rounded-lg text-center border border-green-200 dark:border-green-800">
-                <div class="text-xl font-bold text-green-600 dark:text-green-400">
-                  {tab.data.length > 0 ? (tab.data[0]?.fecha.split('-')[0] || '2020') : '2020'}-{new Date().getFullYear()}
-                </div>
-                <div class="text-xs text-gray-600 dark:text-gray-400">Periodo</div>
-              </div>
-              {tab.id === 'formador' && (
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-3 rounded-lg text-center border border-purple-200 dark:border-purple-800">
-                  <div class="text-xl font-bold text-purple-600 dark:text-purple-400">
-                    {tab.data.reduce((sum: number, item: any) => sum + (parseInt(item.horas) || 0), 0)}
-                  </div>
-                  <div class="text-xs text-gray-600 dark:text-gray-400">Total Horas</div>
-                </div>
-              )}
-            </div>
           </div>
         ))}
       </div>
