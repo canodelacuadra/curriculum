@@ -10,21 +10,6 @@ interface Props {
 }
 
 const { title = 'Portfolio - José Antonio Cano', description = 'Curriculum Vitae de José Antonio Cano de la Cuadra' } = Astro.props;
-
-// Script preventivo para evitar flash de tema
-const preventThemeFlash = `
-  (function() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const theme = savedTheme || systemTheme;
-    
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  })();
-`;
 ---
 
 <!DOCTYPE html>
@@ -36,9 +21,6 @@ const preventThemeFlash = `
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script define:vars={{ preventThemeFlash }}>
-      eval(preventThemeFlash);
-    </script>
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <div class="min-h-screen flex flex-col">
