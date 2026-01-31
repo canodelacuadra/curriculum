@@ -6,13 +6,14 @@
       "src": "img/jose-cano.jpg",
       "alt": "Foto de José Antonio Cano"
     },
-    "direccion": {
+    "contacto": {
       "calle": "C/ Labradores 8",
       "ciudad": "45516. La Puebla de Montalbán",
-      "movil": "600 255 567"
+      "movil": "600 255 567",
+       "email": "canodelacuadra@gmail.com"
     },
-    "contacto": {
-      "email": "canodelacuadra@gmail.com",
+    "datosNacimiento": {
+     
       "lugarNacimiento": "La Puebla de Montalbán",
       "fechaNacimiento": "17/07/1966"
     }
@@ -310,29 +311,27 @@
   },
     "tecnologias": {
       "desarrolloWeb": {
-      "lenguajes": ["HTML5", "CSS3", "JavaScript", "TypeScript", "PHP", "SQL"],
-      "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "JQuery", "WordPress"],
+      "lenguajes": ["HTML5", "CSS3", "JavaScript", "Python", "PHP", "SQL"],
+      "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "Vite"],
       "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash"],
-      "aplicacionesWeb": ["WordPress", "Prestashop", "Woocommerce", "Drupal"],
+      "aplicacionesWeb": ["WordPress", "Prestashop", "Drupal"],
       "apis": ["Google Maps", "APIs HTML5 JavaScript", "YouTube", "REST APIs", "GraphQL"],
       "baseDatos": ["PostgreSQL", "MySQL", "MongoDB"],
       "despliegue": ["Vercel", "Netlify", "GitHub Pages", "Docker"],
-      "testing": ["Jest", "Cypress", "Testing Library"],
+      "testing": ["Jest", "Cypress"],
       "seguridad": ["JWT", "OAuth", "HTTPS", "CORS"],
-      "ia": ["GitHub Copilot", "ChatGPT", "Code Assistant"]
+      "ia": ["GitHub Copilot", "ChatGPT", "OpenCode"]
     },
     "expresionAudiovisual": {
       "imagenRaster": ["Photoshop", "Gimp", "Pixlr", "Figma"],
       "imagenVectorial": ["Adobe Illustrator", "Corel Draw", "Figma"],
-      "maquetacion": ["Adobe InDesign", "Quark XPress"],
-      "video": ["Adobe Premiere", "After Effects", "DaVinci Resolve"]
+      "maquetacion": ["Adobe InDesign", "Scribus"],
+      "video": ["Adobe Premiere", "After Effects"]
     }
   },
   "redes": {
     "github": "https://github.com/canodelacuadra",
-    "youtube": "https://www.youtube.com/user/canodelacuadra/",
-    "linkedin": "https://www.linkedin.com/in/canodelacuadra",
-    "twitter": "https://twitter.com/canodelacuadra",
-    "wordpress": "http://creandowebdesdetoledo.wordpress.com/"
+    "linkedin": "https://www.linkedin.com/in/canodelacuadra"
+  
   }
 }

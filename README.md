@@ -1,4 +1,4 @@
-# 📚 Portfolio de José Antonio Cano
+# 📚 Curriculum de José Antonio Cano
 
 Portfolio web moderno desarrollado con Astro, TypeScript, Tailwind CSS y Framer Motion.
 
