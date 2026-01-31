@@ -2,7 +2,7 @@ import './style.css'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import curriculum from './data/curriculum.json'
 
-//console.log('📋 Curriculum cargado:', curriculum)
+console.log('📋 Curriculum cargado:', curriculum)
 
 function createCurriculumHTML(data) {
   return `
@@ -12,15 +12,15 @@ function createCurriculumHTML(data) {
           <div class="profile-info">
             <h1>${data.personal.nombre}</h1>
             <p class="subtitle">Desarrollador Web & Formador</p>
-            <div class="contact-info">
-              <p><i class="fas fa-map-marker-alt"></i> ${data.personal.contacto.calle}, ${data.personal.contacto.ciudad}</p>
-              <p><i class="fas fa-mobile-alt"></i> ${data.personal.contacto.movil}</p>
-              <p><i class="fas fa-envelope"></i> ${data.personal.contacto.email}</p>
-              <p><i class="fas fa-calendar-alt"></i> ${data.personal.datosNacimiento.fechaNacimiento} | <i class="fas fa-map-marker-alt"></i> ${data.personal.datosNacimiento.lugarNacimiento}</p>
-            </div>
             <div class="social-networks">
-              <a href="${data.redes.github}" target="_blank">GitHub</a>
-              <a href="${data.redes.linkedin}" target="_blank">LinkedIn</a>
+              <a href="${data.redes.github}" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="${data.redes.linkedin}" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>
@@ -239,11 +239,43 @@ function createCurriculumHTML(data) {
           </div>
         </details>
 
-      
+        <footer class="contact-footer">
+          <h3>Contacto</h3>
+          <div class="contact-grid">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <span class="contact-label">Ubicación</span>
+                <span class="contact-value">${data.personal.contacto.calle}, ${data.personal.contacto.ciudad}</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <span class="contact-label">Teléfono</span>
+                <span class="contact-value">${data.personal.contacto.movil}</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:${data.personal.contacto.email}" class="contact-value">${data.personal.contacto.email}</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-birthday-cake"></i>
+              <div>
+                <span class="contact-label">Fecha de nacimiento</span>
+                <span class="contact-value">${data.personal.datosNacimiento.fechaNacimiento} | ${data.personal.datosNacimiento.lugarNacimiento}</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+      </div>
   `
 }
-
-
 
 
 document.querySelector('#app').innerHTML = createCurriculumHTML(curriculum)
