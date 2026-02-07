@@ -2,4 +2,11 @@
 import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  output: 'static',
+  build: {
+    format: 'file'
+  },
+  site: 'https://canodelacuadra.github.io/curriculum',
+  base: '/curriculum'
+});
