@@ -8,5 +8,5 @@ export default defineConfig({
     format: 'file'
   },
   site: 'https://canodelacuadra.github.io/curriculum',
-  base: '/curriculum'
+  base: '/curriculum/'
 });
