@@ -2,22 +2,23 @@
 import '../styles/global.css';
 import curriculum from '../data/curriculum.json';
 import Icon from '../components/Icon.astro';
-import { mapTechName } from '../components/icons/icon-types';
+---
 ---
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
+ <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{curriculum.personal.nombre} - Curriculum Vitae</title>
     <meta name="description" content="Curriculum Vitae de {curriculum.personal.nombre}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
     <div class="container">
         <header>
             <h1>{curriculum.personal.nombre}</h1>
-            <p>Desarrollador Web & Formador</p>
+            <p>Desarrollador Web & Formador para el Empleo</p>
             <div class="social-icons">
                 <a href={curriculum.redes.github} target="_blank">
                     <Icon name="github" size="md" />
@@ -35,7 +36,8 @@ import { mapTechName } from '../components/icons/icon-types';
                     <div class="item">
                         <h3>{item.estudios}</h3>
                         <p><strong>{item.institucion}</strong> - {item.fecha}</p>
-                        <p>{item.observaciones}</p>
+                        {item.duracion && <p><em>{item.duracion}</em></p>}
+                        {item.observaciones && <p>{item.observaciones}</p>}
                     </div>
                 ))}
             </section>
@@ -49,7 +51,10 @@ import { mapTechName } from '../components/icons/icon-types';
                         <h4>{item.cargo}</h4>
                         <p><strong>{item.empresa}</strong> - {item.fecha}</p>
                         <p>{item.descripcion}</p>
-                        <p><em>{item.horas} horas | {item.observaciones}</em></p>
+                        <p><em>{item.horas} horas</em></p>
+                        {item.lugar && <p><em>{item.lugar}</em></p>}
+                        {item.fechaDetallada && <p><em>{item.fechaDetallada}</em></p>}
+                        {item.observaciones && <p><em>{item.observaciones}</em></p>}
                     </div>
                 ))}
 
@@ -103,7 +108,7 @@ import { mapTechName } from '../components/icons/icon-types';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.lenguajes.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'html5'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -116,7 +121,7 @@ import { mapTechName } from '../components/icons/icon-types';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.frameworks.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'react'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -129,7 +134,7 @@ import { mapTechName } from '../components/icons/icon-types';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.herramientas.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'vscode'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -142,7 +147,7 @@ import { mapTechName } from '../components/icons/icon-types';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'postgresql'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -159,7 +164,7 @@ import { mapTechName } from '../components/icons/icon-types';
                                 ...curriculum.tecnologias.expresionAudiovisual.video
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'photoshop'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -175,7 +180,7 @@ import { mapTechName } from '../components/icons/icon-types';
                                 ...curriculum.tecnologias.desarrolloWeb.testing
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <Icon name={'jest'} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}

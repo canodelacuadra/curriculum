@@ -11,19 +11,26 @@
 /* Variables básicas */
 :root {
     --color-bg: #ffffff;
-    --color-text: #333333;
-    --color-accent: #8b0000;
-    --color-light: #f8f8f3;
+    --color-text: #1a1a1a;
+    --color-accent: #2563eb;
+    --color-accent-hover: #1d4ed8;
+    --color-light: #f3f4f6;
+    --color-light-hover: #e5e7eb;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --max-width: 1000px;
-    --border-color: #dddddd;
+    --border-color: #e5e7eb;
+    --border-radius: 12px;
+    --border-radius-sm: 8px;
+    --transition-fast: 0.2s ease;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --accent-light: #dbeafe;
 }
 
 /* Tipografía básica */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: var(--color-text);
     background: var(--color-bg);
@@ -42,34 +49,38 @@ header {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--border-color);
 }
 
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: var(--color-text);
+    font-weight: 700;
 }
 
 header p {
     font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #666;
+    margin-bottom: 1.5rem;
+    color: var(--color-accent);
+    font-weight: 500;
 }
 
 .social {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
 .social a {
     color: var(--color-accent);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--color-accent);
-    border-radius: 4px;
-    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
 }
 
 .social a:hover {
@@ -84,31 +95,36 @@ section {
 
 section h2 {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--color-text);
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 section h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     margin: 1.5rem 0 1rem 0;
     color: var(--color-accent);
+    font-weight: 600;
 }
 
 section h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     color: var(--color-text);
+    font-weight: 600;
 }
 
 /* Items de experiencia/formación */
 .item {
     margin-bottom: 1.5rem;
-    padding: 1rem;
+    padding: 1.25rem;
     background: var(--color-light);
-    border-left: 4px solid var(--color-accent);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.item:hover {
+    background: var(--color-light-hover);
 }
 
 .item p {
@@ -117,6 +133,7 @@ section h4 {
 
 .item strong {
     color: var(--color-text);
+    font-weight: 600;
 }
 
 .item em {
@@ -127,14 +144,15 @@ section h4 {
 /* Tecnologías */
 .tech-group {
     margin-bottom: 2rem;
-    padding: 1rem;
+    padding: 1.25rem;
     background: var(--color-light);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
 }
 
 .tech-group h3 {
     margin-top: 0;
     color: var(--color-accent);
+    font-weight: 600;
 }
 
 .tech-group ul {
@@ -147,9 +165,15 @@ section h4 {
 .tech-group li {
     background: var(--color-accent);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 3px;
-    font-size: 0.9rem;
+    padding: 0.375rem 0.875rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.tech-group li:hover {
+    background: var(--color-accent-hover);
 }
 
 /* Contacto */
@@ -160,15 +184,21 @@ section h4 {
 }
 
 .contact-info p {
-    padding: 1rem;
+    padding: 1.25rem;
     background: var(--color-light);
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     margin-bottom: 0;
+    transition: all var(--transition-fast);
+}
+
+.contact-info p:hover {
+    background: var(--color-light-hover);
 }
 
 .contact-info a {
     color: var(--color-accent);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact-info a:hover {
@@ -182,29 +212,45 @@ footer {
     margin-top: var(--spacing-lg);
     border-top: 1px solid var(--border-color);
     color: #666;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 0.5rem;
+        padding: 1rem;
     }
-    
+
     header h1 {
         font-size: 2rem;
     }
-    
+
+    header p {
+        font-size: 1rem;
+    }
+
     section h2 {
         font-size: 1.5rem;
     }
-    
+
     .social {
-        flex-direction: column;
-        align-items: center;
+        gap: 0.5rem;
     }
-    
+
+    .social a {
+        width: 40px;
+        height: 40px;
+    }
+
     .tech-group ul {
         justify-content: center;
+    }
+
+    .item {
+        padding: 1rem;
+    }
+
+    .contact-info p {
+        padding: 1rem;
     }
 }

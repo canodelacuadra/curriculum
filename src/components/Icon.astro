@@ -1,39 +1,69 @@
 ---
 import { type IconName, type IconSize } from './icons/icon-types';
-import { techIcons } from './icons/tech-icons';
-import { socialIcons } from './icons/social-icons';
 
 interface Props {
   name: IconName;
   size?: IconSize;
   variant?: 'solid' | 'outline';
   class?: string;
+  style?: string;
+  title?: string;
 }
 
-const { name, size = 'md', variant = 'outline', class: className = '' } = Astro.props;
+const { name, size = 'md', variant = 'outline', class: className = '', style = '', title = '' } = Astro.props;
 
-// Combina todos los iconos
-const allIcons = { ...techIcons, ...socialIcons };
-const iconSvg = allIcons[name] || '';
-
-// Sistema de tamaños responsive
-const sizeConfig = {
-  xs: 'w-4 h-4',
-  sm: 'w-5 h-5', 
-  md: 'w-6 h-6',
-  lg: 'w-8 h-8',
-  xl: 'w-10 h-10'
+const iconMap: Record<string, string> = {
+  github: 'fab fa-github',
+  linkedin: 'fab fa-linkedin-in',
+  html5: 'fab fa-html5',
+  css3: 'fab fa-css3-alt',
+  javascript: 'fab fa-js',
+  typescript: 'fab fa-js',
+  python: 'fab fa-python',
+  php: 'fab fa-php',
+  sql: 'fas fa-database',
+  react: 'fab fa-react',
+  nodejs: 'fab fa-node-js',
+  express: 'fas fa-server',
+  bootstrap: 'fab fa-bootstrap',
+  vite: 'fas fa-rocket',
+  phaser: 'fas fa-gamepad',
+  vscode: 'fas fa-code',
+  git: 'fab fa-git-alt',
+  npm: 'fab fa-npm',
+  postgresql: 'fas fa-database',
+  mysql: 'fas fa-database',
+  mongodb: 'fas fa-database',
+  vercel: 'fas fa-cloud-arrow-up',
+  netlify: 'fas fa-cloud-arrow-up',
+  'github-pages': 'fab fa-github',
+  docker: 'fab fa-docker',
+  jest: 'fas fa-vial',
+  cypress: 'fas fa-vial',
+  photoshop: 'fas fa-image',
+  illustrator: 'fas fa-pen-nib',
+  premiere: 'fas fa-film',
+  aftereffects: 'fas fa-wand-magic-sparkles',
+  figma: 'fab fa-figma'
 };
 
-const finalClasses = `
-  icon 
-  ${sizeConfig[size]} 
-  ${variant === 'outline' ? 'icon-outline' : 'icon-solid'}
-  ${className}
-`.trim();
+const sizeConfig = {
+  xs: 'w-4 h-4 text-xs',
+  sm: 'w-5 h-5 text-sm',
+  md: 'w-6 h-6 text-md',
+  lg: 'w-8 h-8 text-lg',
+  xl: 'w-10 h-10 text-xl'
+};
+
+const finalClasses = [
+  'icon',
+  sizeConfig[size] || sizeConfig.md,
+  className
+].filter(Boolean).join(' ');
+
+const faIconName = iconMap[name] || 'fas fa-code';
+const titleText = title || 'Icon: ' + name.charAt(0).toUpperCase() + name.slice(1);
+
 ---
 
-<div 
-  class={finalClasses}
-  set:html={iconSvg}
-/>
+<i class="${faIconName} ${finalClasses}" title="${titleText}" style="${style}" aria-hidden="true"></i>

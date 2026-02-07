@@ -21,45 +21,52 @@
   "formacion": [
     {
       "fecha": "1984-1989",
-      "estudios": "Licenciado en Ciencias de la Información",
+      "estudios": "Licenciado en Ciencias de la Información Especialidad Audiovisual",
       "institucion": "Universidad Complutense de Madrid",
-      "observaciones": "Especialidad Audiovisual"
+      "duracion": "5 años",
+      "observaciones": "Título oficial avalado por el Ministerio de Educación"
     },
     {
       "fecha": "2010",
-      "estudios": "Certficado de Profesionalidad: Formador Ocupacional",
+      "estudios": "Certificado de Profesionalidad: Formador Ocupacional",
       "institucion": "Fedeto",
+      "duracion": "380 horas",
       "observaciones": "Titulo oficial avalado por el Ministerio de Empleo y Economía"
     },
     {
       "fecha": "2019",
-      "estudios": "ELABORACION DE CONTENIDOS FORMATIVOS PARA TELEFORMACIÓN( E-LEARNING)",
+      "estudios": "Elaboración de contenidos formativos para teleformación (E-LEARNING)",
       "institucion": "Forem CLM",
-      "observaciones": "60 horas"
+      "duracion": "60 horas",
+      "observaciones": "Título avalado por la JCCM, Junta de Comunidades de Castilla la Mancha"
     },
     {
       "fecha": "2022",
       "estudios": "Evaluación de los Sistemas de Gestión de Formación Profesional para el Empleo",
       "institucion": "Vía Innovación Consultoría de proyectos",
-      "observaciones": "30 horas, modalidad mixta de Aula virtual y teleformación (3-28 octubre 2022)"
+      "duracion": "30 horas",
+      "observaciones": "modalidad mixta de Aula virtual y teleformación (3-28 octubre 2022)"
     },
     {
       "fecha": "2022",
-      "estudios": "PERSONAL ASESOR Y EVALUADOR ACREDITA",
+      "estudios": "Personal asesor y evaluador Acredita",
       "institucion": "CRN Vinos y Aceites de Ciudad Real",
-      "observaciones": "40 horas, modalidad de Aula Virtual"
+      "duracion": "40 horas",
+      "observaciones": "modalidad de Aula Virtual"
     },
     {
       "fecha": "2023",
       "estudios": "Tecnologías Avanzadas, aplicación y práctica en la FPE",
       "institucion": "Vía Innovación Consultoría de proyectos",
-      "observaciones": "30 horas, modalidad mixta de Aula virtual y teleformación (14-4 abril 2023)"
+      "duracion": "30 horas",
+      "observaciones": "modalidad mixta de Aula virtual y teleformación (14-4 abril 2023)"
     },
     {
       "fecha": "2024",
       "estudios": "Inglés básico",
       "institucion": "Academia Santa Clara",
-      "observaciones": "120 horas"
+      "duracion": "120 horas",
+      "observaciones": ""
     }
   ],
   "experiencia": {
@@ -70,7 +77,9 @@
         "cargo": "Profesor",
         "descripcion": "DAW y MULTIMEDIA INTERACTIVA",
         "empresa": "Grupo CDM-Alcorcón",
-        "observaciones": "Alcorcón, 4/12/2025"
+        "lugar": "Alcorcón",
+        "fechaDetallada": "4/12/2025",
+        "observaciones": ""
       },
       {
         "fecha": "2025",
@@ -78,7 +87,9 @@
         "cargo": "Profesor",
         "descripcion": "DAW MERN (aula virtual, teletrabajo)",
         "empresa": "Grupo Aspasia-Adalid",
-        "observaciones": "Madrid, 7/5/2025"
+        "lugar": "Madrid",
+        "fechaDetallada": "7/5/2025",
+        "observaciones": ""
       },
       {
         "fecha": "2024",
@@ -86,7 +97,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo Avanzado Web (React y Figma)",
         "empresa": "Patrimonio Nacional",
-        "observaciones": "Aranjuez, 30/9/2024"
+        "lugar": "Aranjuez",
+        "fechaDetallada": "30/9/2024",
+        "observaciones": ""
       },
       {
         "fecha": "2024",
@@ -94,7 +107,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías Web",
         "empresa": "Patrimonio Nacional",
-        "observaciones": "Aranjuez, 18/5/2024"
+        "lugar": "Aranjuez",
+        "fechaDetallada": "18/5/2024",
+        "observaciones": ""
       },
       {
         "fecha": "2023",
@@ -102,7 +117,9 @@
         "cargo": "Profesor",
         "descripcion": "Cursos de Iniciación informática mujerCLM",
         "empresa": "UTE Talavera (Forplan...)",
-        "observaciones": "Pueblos de Toledo, 29/03/2023"
+        "lugar": "Pueblos de Toledo",
+        "fechaDetallada": "29/03/2023",
+        "observaciones": ""
       },
       {
         "fecha": "2021-2022",
@@ -110,7 +127,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
         "empresa": "Atperson",
-        "observaciones": "Cuenca, Diciembre 2021 - Abril de 2022"
+        "lugar": "Cuenca",
+        "fechaDetallada": "Diciembre 2021 - Abril de 2022",
+        "observaciones": ""
       },
       {
         "fecha": "2021",
@@ -118,7 +137,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
         "empresa": "Centro Colón",
-        "observaciones": "Fuenlabrada, Madrid Mayo - Noviembre"
+        "lugar": "Fuenlabrada, Madrid",
+        "fechaDetallada": "Mayo - Noviembre",
+        "observaciones": ""
       },
       {
         "fecha": "2020",
@@ -126,7 +147,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
         "empresa": "Ayla Diseño y Tecnología",
-        "observaciones": "Guadalajara Marzo - 16 de Nomviembre"
+        "lugar": "Guadalajara",
+        "fechaDetallada": "Marzo - 16 de Noviembre",
+        "observaciones": ""
       },
       {
         "fecha": "2019",
@@ -134,7 +157,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
         "empresa": "Centro de Formación Hinarejos",
-        "observaciones": "Módulos II y III Villarrobledo, Albacete Mayo - 9 de Agosto"
+        "lugar": "Villarrobledo, Albacete",
+        "fechaDetallada": "Mayo - 9 de Agosto",
+        "observaciones": "Módulos II y III"
       },
       {
         "fecha": "2019",
@@ -142,7 +167,9 @@
         "cargo": "Profesor",
         "descripcion": "Desarrollo de Aplicaciones con Tecnologías web",
         "empresa": "Lopez Santiago Consultores",
-        "observaciones": "Certificado Completo San Martín de Valdeiglesias, Madrid. Diciembre 2018 a Mayo de 2019"
+        "lugar": "San Martín de Valdeiglesias, Madrid",
+        "fechaDetallada": "Diciembre 2018 a Mayo de 2019",
+        "observaciones": "Certificado Completo"
       },
       {
         "fecha": "2018",
@@ -150,7 +177,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
         "empresa": "Ayuntamiento de Villarrobledo",
-        "observaciones": "Villarrobledo, Octubre y Noviembre de 2018"
+        "lugar": "Villarrobledo",
+        "fechaDetallada": "Octubre y Noviembre de 2018",
+        "observaciones": ""
       },
       {
         "fecha": "2018",
@@ -158,7 +187,9 @@
         "cargo": "Profesor",
         "descripcion": "Autoedición de imágenes digitales y vídeo",
         "empresa": "Ymca, Toledo",
-        "observaciones": "Toledo, Julio de 2017"
+        "lugar": "Toledo",
+        "fechaDetallada": "Julio de 2017",
+        "observaciones": ""
       },
       {
         "fecha": "2018",
@@ -166,7 +197,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
         "empresa": "Forca, Nuevos Retos de Futuro",
-        "observaciones": "Torrijos 14Junio - 13 De Diciembre"
+        "lugar": "Torrijos",
+        "fechaDetallada": "14 Junio - 13 Diciembre",
+        "observaciones": ""
       },
       {
         "fecha": "2017",
@@ -174,7 +207,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
         "empresa": "Academia Arma - Talavera de la Reina",
-        "observaciones": "Modulo I y II 26 Diciembre 2016 - 31 de Marzo 2017"
+        "lugar": "",
+        "fechaDetallada": "26 Diciembre 2016 - 31 de Marzo 2017",
+        "observaciones": "Modulo I y II"
       },
       {
         "fecha": "2016",
@@ -182,7 +217,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
         "empresa": "Diputación de Toledo",
-        "observaciones": "Taller de Empleo Torrijos 3.0 Mayo - 31 de Octubre"
+        "lugar": "Torrijos",
+        "fechaDetallada": "Mayo - 31 de Octubre",
+        "observaciones": "Taller de Empleo 3.0"
       },
       {
         "fecha": "2016",
@@ -190,7 +227,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de páginas web",
         "empresa": "Infobit",
-        "observaciones": "Módulo II y III Febrero-Abril"
+        "lugar": "",
+        "fechaDetallada": "Febrero-Abril",
+        "observaciones": "Módulo II y III"
       },
       {
         "fecha": "2015",
@@ -198,7 +237,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Desarrollo de Aplicaciones con Tecnologías Web",
         "empresa": "Unitel",
-        "observaciones": "Módulo II y III(PHP, MySQL,Ajax, Wordpress, Prestashop, Joomla...):Enero-Abril"
+        "lugar": "",
+        "fechaDetallada": "Enero-Abril",
+        "observaciones": "Módulo II y III (PHP, MySQL, Ajax, WordPress, Prestashop, Joomla...)"
       },
       {
         "fecha": "2014",
@@ -206,7 +247,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de Páginas webs",
         "empresa": "Virtual Knowledge",
-        "observaciones": "Módulo II(creación de web con javascript):Julio-Septiembre"
+        "lugar": "",
+        "fechaDetallada": "Julio-Septiembre",
+        "observaciones": "Módulo II (creación de web con javascript)"
       },
       {
         "fecha": "2014",
@@ -214,7 +257,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Desarrollo de aplicaciones con Tecnologías Web",
         "empresa": "Centro de Formación Autoescuela Stylo",
-        "observaciones": "Curso completo:Marzo, Agosto 2014"
+        "lugar": "",
+        "fechaDetallada": "Marzo, Agosto 2014",
+        "observaciones": "Curso completo"
       },
       {
         "fecha": "2014",
@@ -222,7 +267,9 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Actividades Administrativas relacionadas con la Atención al Cliente",
         "empresa": "Virtual Knowledge",
-        "observaciones": "-"
+        "lugar": "",
+        "fechaDetallada": "",
+        "observaciones": ""
       },
       {
         "fecha": "2013",
@@ -230,6 +277,8 @@
         "cargo": "Profesor",
         "descripcion": "Certificado de Profesionalidad: Confección y Publicación de Páginas webs",
         "empresa": "Virtual Knowledge",
+        "lugar": "",
+        "fechaDetallada": "",
         "observaciones": "Módulos II y III del Certificado: Confección de páginas webs con lenguajes de guión, y publicación de páginas web"
       }
     ],
