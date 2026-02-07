@@ -1,3 +1,6 @@
+/* Import styles */
+@import './icons.css';
+
 /* Reset básico */
 * {
     margin: 0;

@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import curriculum from '../data/curriculum.json';
+import Icon from '../components/Icon.astro';
+import { mapTechName } from '../components/icons/icon-types';
 ---
 
 <!DOCTYPE html>
@@ -16,9 +18,13 @@ import curriculum from '../data/curriculum.json';
         <header>
             <h1>{curriculum.personal.nombre}</h1>
             <p>Desarrollador Web & Formador</p>
-            <div class="social">
-                <a href={curriculum.redes.github} target="_blank">GitHub</a>
-                <a href={curriculum.redes.linkedin} target="_blank">LinkedIn</a>
+            <div class="social-icons">
+                <a href={curriculum.redes.github} target="_blank">
+                    <Icon name="github" size="md" />
+                </a>
+                <a href={curriculum.redes.linkedin} target="_blank">
+                    <Icon name="linkedin" size="md" />
+                </a>
             </div>
         </header>
 
@@ -90,66 +96,91 @@ import curriculum from '../data/curriculum.json';
 
             <section id="tecnologias">
                 <h2>Tecnologías y Herramientas</h2>
-                
-                <div class="tech-group">
-                    <h3>Lenguajes</h3>
-                    <ul>
-                        {curriculum.tecnologias.desarrolloWeb.lenguajes.map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
+                <div class="tech-grid">
+                    <!-- Lenguajes -->
+                    <div class="tech-category">
+                        <h3>Lenguajes</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.lenguajes.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                <div class="tech-group">
-                    <h3>Frameworks</h3>
-                    <ul>
-                        {curriculum.tecnologias.desarrolloWeb.frameworks.map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
+                    <!-- Frameworks -->
+                    <div class="tech-category">
+                        <h3>Frameworks</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.frameworks.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                <div class="tech-group">
-                    <h3>Herramientas</h3>
-                    <ul>
-                        {curriculum.tecnologias.desarrolloWeb.herramientas.map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
+                    <!-- Herramientas -->
+                    <div class="tech-category">
+                        <h3>Herramientas</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.herramientas.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                <div class="tech-group">
-                    <h3>Bases de Datos</h3>
-                    <ul>
-                        {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
+                    <!-- Bases de Datos -->
+                    <div class="tech-category">
+                        <h3>Bases de Datos</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                <div class="tech-group">
-                    <h3>Expresión Audiovisual</h3>
-                    <ul>
-                        {[
-                            ...curriculum.tecnologias.expresionAudiovisual.imagenRaster,
-                            ...curriculum.tecnologias.expresionAudiovisual.imagenVectorial,
-                            ...curriculum.tecnologias.expresionAudiovisual.video
-                        ].map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
-                </div>
+                    <!-- Expresión Audiovisual -->
+                    <div class="tech-category">
+                        <h3>Expresión Audiovisual</h3>
+                        <div class="tech-items">
+                            {[
+                                ...curriculum.tecnologias.expresionAudiovisual.imagenRaster,
+                                ...curriculum.tecnologias.expresionAudiovisual.imagenVectorial,
+                                ...curriculum.tecnologias.expresionAudiovisual.video
+                            ].map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
 
-                <div class="tech-group">
-                    <h3>Despliegue & Testing</h3>
-                    <ul>
-                        {[
-                            ...curriculum.tecnologias.desarrolloWeb.despliegue,
-                            ...curriculum.tecnologias.desarrolloWeb.testing
-                        ].map((tech) => (
-                            <li>{tech}</li>
-                        ))}
-                    </ul>
+                    <!-- Despliegue & Testing -->
+                    <div class="tech-category">
+                        <h3>Despliegue & Testing</h3>
+                        <div class="tech-items">
+                            {[
+                                ...curriculum.tecnologias.desarrolloWeb.despliegue,
+                                ...curriculum.tecnologias.desarrolloWeb.testing
+                            ].map((tech) => (
+                                <div class="tech-item">
+                                    <Icon name={mapTechName(tech)} size="lg" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </section>
 

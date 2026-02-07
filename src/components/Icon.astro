@@ -1,0 +1,42 @@
+---
+import { type IconName, type IconSize } from './icons/icon-types';
+import { techIcons } from './icons/tech-icons';
+import { socialIcons } from './icons/social-icons';
+
+interface Props {
+  name: IconName;
+  size?: IconSize;
+  variant?: 'solid' | 'outline';
+  class?: string;
+}
+
+const { name, size = 'md', variant = 'outline', class: className = '' } = Astro.props;
+
+// Combina todos los iconos
+const allIcons = { ...techIcons, ...socialIcons };
+const iconSvg = allIcons[name] || '';
+
+// Sistema de tamaños responsive
+const sizeConfig = {
+  xs: 'w-4 h-4',
+  sm: 'w-5 h-5', 
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-10 h-10'
+};
+
+const finalClasses = `
+  icon 
+  ${sizeConfig[size]} 
+  ${variant === 'outline' ? 'icon-outline' : 'icon-solid'}
+  ${className}
+`.trim();
+---
+
+<div 
+  class={finalClasses}
+  set:html={iconSvg}
+/>
+```
+
+-gist
