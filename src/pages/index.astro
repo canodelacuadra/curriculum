@@ -34,10 +34,10 @@ import Icon from '../components/Icon.astro';
                 <h2>Formación Académica</h2>
                 {curriculum.formacion.map((item) => (
                     <div class="item">
-                        <h3>{item.estudios}</h3>
-                        <p><strong>{item.institucion}</strong> - {item.fecha}</p>
-                        {item.duracion && <p><em>{item.duracion}</em></p>}
-                        {item.observaciones && <p>{item.observaciones}</p>}
+                        <h4>{item.estudios}</h4>
+                        <p class="empresa-fecha"><strong>{item.institucion}</strong> - {item.fecha}</p>
+                        {item.observaciones && <p class="descripcion">{item.observaciones}</p>}
+                        {item.duracion && <p class="extras">{item.duracion}</p>}
                     </div>
                 ))}
             </section>
@@ -49,12 +49,9 @@ import Icon from '../components/Icon.astro';
                 {curriculum.experiencia.formadorOcupacional.map((item) => (
                     <div class="item">
                         <h4>{item.cargo}</h4>
-                        <p><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p>{item.descripcion}</p>
-                        <p><em>{item.horas} horas</em></p>
-                        {item.lugar && <p><em>{item.lugar}</em></p>}
-                        {item.fechaDetallada && <p><em>{item.fechaDetallada}</em></p>}
-                        {item.observaciones && <p><em>{item.observaciones}</em></p>}
+                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                        <p class="descripcion">{item.descripcion}</p>
+                        {(item.horas || item.lugar || item.fechaDetallada || item.observaciones) && <p class="extras">{item.horas}{item.horas && ' horas'}{item.horas && (item.lugar || item.fechaDetallada || item.observaciones) && ' | '}{item.lugar}{item.lugar && (item.fechaDetallada || item.observaciones) && ' | '}{item.fechaDetallada}{item.fechaDetallada && item.observaciones && ' | '}{item.observaciones}</p>}
                     </div>
                 ))}
 
@@ -62,9 +59,9 @@ import Icon from '../components/Icon.astro';
                 {curriculum.experiencia.profesorUniversitario.map((item) => (
                     <div class="item">
                         <h4>{item.cargo}</h4>
-                        <p><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p>{item.descripcion}</p>
-                        <p><em>{item.duracion} | {item.observaciones}</em></p>
+                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                        <p class="descripcion">{item.descripcion}</p>
+                        <p class="extras">{item.duracion} | {item.observaciones}</p>
                     </div>
                 ))}
 
@@ -72,9 +69,9 @@ import Icon from '../components/Icon.astro';
                 {curriculum.experiencia.desarrolloWeb.map((item) => (
                     <div class="item">
                         <h4>{item.cargo}</h4>
-                        <p><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p>{item.descripcion}</p>
-                        <p><em>{item.observaciones}</em></p>
+                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                        <p class="descripcion">{item.descripcion}</p>
+                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
                     </div>
                 ))}
 
@@ -82,9 +79,9 @@ import Icon from '../components/Icon.astro';
                 {curriculum.experiencia.disenoGrafico.map((item) => (
                     <div class="item">
                         <h4>{item.cargo}</h4>
-                        <p><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p>{item.descripcion}</p>
-                        <p><em>{item.observaciones}</em></p>
+                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                        <p class="descripcion">{item.descripcion}</p>
+                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
                     </div>
                 ))}
 
@@ -92,9 +89,9 @@ import Icon from '../components/Icon.astro';
                 {curriculum.experiencia.audiovisual.map((item) => (
                     <div class="item">
                         <h4>{item.cargo}</h4>
-                        <p><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p>{item.descripcion}</p>
-                        <p><em>{item.observaciones}</em></p>
+                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                        <p class="descripcion">{item.descripcion}</p>
+                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
                     </div>
                 ))}
             </section>
@@ -108,7 +105,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.lenguajes.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -121,7 +118,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.frameworks.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -134,7 +131,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.herramientas.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -147,7 +144,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -164,7 +161,7 @@ import Icon from '../components/Icon.astro';
                                 ...curriculum.tecnologias.expresionAudiovisual.video
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -180,7 +177,7 @@ import Icon from '../components/Icon.astro';
                                 ...curriculum.tecnologias.desarrolloWeb.testing
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon tech={tech} size="lg" />
+                                    <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
                                 </div>
                             ))}

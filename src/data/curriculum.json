@@ -24,49 +24,48 @@
       "estudios": "Licenciado en Ciencias de la Información Especialidad Audiovisual",
       "institucion": "Universidad Complutense de Madrid",
       "duracion": "5 años",
-      "observaciones": "Título oficial avalado por el Ministerio de Educación"
+      "observaciones": "Título oficial avalado por el Ministerio de Educación",
+      "lugar":"Madrid"
     },
     {
       "fecha": "2010",
       "estudios": "Certificado de Profesionalidad: Formador Ocupacional",
       "institucion": "Fedeto",
       "duracion": "380 horas",
-      "observaciones": "Titulo oficial avalado por el Ministerio de Empleo y Economía"
+      "observaciones": "Titulo oficial avalado por el Ministerio de Empleo y Economía",
+      "lugar":"Toledo"
     },
     {
       "fecha": "2019",
       "estudios": "Elaboración de contenidos formativos para teleformación (E-LEARNING)",
       "institucion": "Forem CLM",
       "duracion": "60 horas",
-      "observaciones": "Título avalado por la JCCM, Junta de Comunidades de Castilla la Mancha"
-    },
-    {
-      "fecha": "2022",
-      "estudios": "Evaluación de los Sistemas de Gestión de Formación Profesional para el Empleo",
-      "institucion": "Vía Innovación Consultoría de proyectos",
-      "duracion": "30 horas",
-      "observaciones": "modalidad mixta de Aula virtual y teleformación (3-28 octubre 2022)"
+      "observaciones": "Título avalado por la JCCM, Junta de Comunidades de Castilla la Mancha",
+      "lugar":"Toledo"
     },
     {
       "fecha": "2022",
       "estudios": "Personal asesor y evaluador Acredita",
       "institucion": "CRN Vinos y Aceites de Ciudad Real",
       "duracion": "40 horas",
-      "observaciones": "modalidad de Aula Virtual"
+      "observaciones": "",
+      "lugar":"Aula Virtual"
     },
     {
       "fecha": "2023",
       "estudios": "Tecnologías Avanzadas, aplicación y práctica en la FPE",
       "institucion": "Vía Innovación Consultoría de proyectos",
       "duracion": "30 horas",
-      "observaciones": "modalidad mixta de Aula virtual y teleformación (14-4 abril 2023)"
+      "observaciones": "modalidad mixta de Aula virtual y teleformación (14-4 abril 2023)",
+      "lugar":"Aula Virtual"
     },
     {
       "fecha": "2024",
       "estudios": "Inglés básico",
       "institucion": "Academia Santa Clara",
       "duracion": "120 horas",
-      "observaciones": ""
+      "observaciones": "",
+      "lugar":"Toledo"
     }
   ],
   "experiencia": {
