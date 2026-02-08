@@ -10,8 +10,81 @@ import Icon from '../components/Icon.astro';
  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{curriculum.personal.nombre} - Curriculum Vitae</title>
-    <meta name="description" content="Curriculum Vitae de {curriculum.personal.nombre}" />
+    
+    <!-- SEO Basic Meta Tags -->
+    <title>{curriculum.personal.nombre} - Desarrollador Web Full Stack & Formador | Curriculum Vitae</title>
+    <meta name="description" content="Desarrollador Web con más de 10 años de experiencia en formación y desarrollo. Especializado en React, Node.js, JavaScript, TypeScript, PHP. Formador Ocupacional y Profesor Universitario." />
+    <meta name="keywords" content="desarrollador web, full stack, formador ocupacional, profesor, react, node.js, javascript, typescript, php, curriculum, jose antonio cano" />
+    <meta name="author" content="{curriculum.personal.nombre}" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://canodelacuadra.github.io/curriculum/" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{curriculum.personal.nombre} - Desarrollador Web Full Stack & Formador" />
+    <meta property="og:description" content="Desarrollador Web con más de 10 años de experiencia en formación y desarrollo. Especializado en React, Node.js, JavaScript, TypeScript." />
+    <meta property="og:image" content="https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Foto de {curriculum.personal.nombre}" />
+    <meta property="og:url" content="https://canodelacuadra.github.io/curriculum/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Curriculum Vitae - {curriculum.personal.nombre}" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{curriculum.personal.nombre} - Desarrollador Web Full Stack & Formador" />
+    <meta name="twitter:description" content="Desarrollador Web con más de 10 años de experiencia en formación y desarrollo. Especializado en React, Node.js, JavaScript, TypeScript." />
+    <meta name="twitter:image" content="https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg" />
+    <meta name="twitter:image:alt" content="Foto de {curriculum.personal.nombre}" />
+    <meta name="twitter:creator" content="@canodelacuadra" />
+    
+    <!-- Additional Meta Tags -->
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="ES-CM" />
+    <meta name="geo.placename" content="La Puebla de Montalbán, Toledo" />
+    <meta name="ICBM" content="39.8513,-4.1068" />
+    
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{curriculum.personal.nombre}",
+      "jobTitle": ["Desarrollador Web Full Stack", "Formador Ocupacional", "Profesor"],
+      "description": "Desarrollador Web con más de 10 años de experiencia en formación ocupacional y universitaria. Especializado en tecnologías frontend y backend.",
+      "url": "https://canodelacuadra.github.io/curriculum/",
+      "image": "https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg",
+      "email": "{curriculum.personal.contacto.email}",
+      "telephone": "{curriculum.personal.contacto.movil}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{curriculum.personal.contacto.calle}",
+        "addressLocality": "{curriculum.personal.contacto.ciudad}",
+        "addressCountry": "ES"
+      },
+      "knowsAbout": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Node.js", "Express.js", "PHP", "MySQL", "MongoDB", "Python"],
+      "sameAs": [
+        "{curriculum.redes.github}",
+        "{curriculum.redes.linkedin}"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Universidad Complutense de Madrid"
+      },
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Grupo CDM-Alcorcón"
+        },
+        {
+          "@type": "Organization", 
+          "name": "Grupo Aspasia-Adalid"
+        }
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 <body>
