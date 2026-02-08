@@ -108,7 +108,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.lenguajes.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'html5'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -121,7 +121,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.frameworks.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'react'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -134,7 +134,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.herramientas.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'vscode'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -147,7 +147,7 @@ import Icon from '../components/Icon.astro';
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'postgresql'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -164,7 +164,7 @@ import Icon from '../components/Icon.astro';
                                 ...curriculum.tecnologias.expresionAudiovisual.video
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'photoshop'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}
@@ -180,7 +180,7 @@ import Icon from '../components/Icon.astro';
                                 ...curriculum.tecnologias.desarrolloWeb.testing
                             ].map((tech) => (
                                 <div class="tech-item">
-                                    <Icon name={'jest'} size="lg" />
+                                    <Icon tech={tech} size="lg" />
                                     <span>{tech}</span>
                                 </div>
                             ))}

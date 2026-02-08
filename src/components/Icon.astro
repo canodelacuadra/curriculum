@@ -1,18 +1,20 @@
 ---
-import { type IconName, type IconSize } from './icons/icon-types';
-
 interface Props {
-  name: IconName;
-  size?: IconSize;
-  variant?: 'solid' | 'outline';
+  name?: string;
+  tech?: string;
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2x' | '3x';
+  variant?: string;
   class?: string;
   style?: string;
   title?: string;
 }
 
-const { name, size = 'md', variant = 'outline', class: className = '', style = '', title = '' } = Astro.props;
+const { name, tech, size = 'md', variant = 'outline', class: className = '', style = '', title = '' }: Props = Astro.props;
 
-const iconMap: Record<string, string> = {
+// Determinar qué icono usar
+const iconName = tech ? getIconForTech(tech) : (name || 'html5');
+
+const iconos = {
   github: 'fab fa-github',
   linkedin: 'fab fa-linkedin-in',
   html5: 'fab fa-html5',
@@ -47,23 +49,65 @@ const iconMap: Record<string, string> = {
   figma: 'fab fa-figma'
 };
 
-const sizeConfig = {
-  xs: 'w-4 h-4 text-xs',
-  sm: 'w-5 h-5 text-sm',
-  md: 'w-6 h-6 text-md',
-  lg: 'w-8 h-8 text-lg',
-  xl: 'w-10 h-10 text-xl'
+// Función para obtener icono según nombre de tecnología
+function getIconForTech(techName: string): string {
+  const techMap: Record<string, string> = {
+    'HTML5': 'html5',
+    'CSS3': 'css3',
+    'JavaScript': 'javascript',
+    'TypeScript': 'typescript',
+    'Python': 'python',
+    'PHP': 'php',
+    'SQL': 'sql',
+    'HTTP': 'html5',
+    'React': 'react',
+    'Node.js': 'nodejs',
+    'Express.js': 'express',
+    'Bootstrap': 'bootstrap',
+    'Vite': 'vite',
+    'Phaser.js': 'phaser',
+    'VS Code': 'vscode',
+    'Git': 'git',
+    'GitHub': 'github',
+    'Terminal/Git Bash': 'git',
+    'npm': 'npm',
+    'PostgreSQL': 'postgresql',
+    'MySQL': 'mysql',
+    'MongoDB': 'mongodb',
+    'Vercel': 'vercel',
+    'Netlify': 'netlify',
+    'GitHub Pages': 'github-pages',
+    'Docker': 'docker',
+    'Jest': 'jest',
+    'Cypress': 'cypress',
+    'Photoshop': 'photoshop',
+    'Gimp': 'photoshop',
+    'Pixlr': 'photoshop',
+    'Adobe Illustrator': 'illustrator',
+    'Corel Draw': 'illustrator',
+    'Adobe Premiere': 'premiere',
+    'After Effects': 'aftereffects',
+    'Adobe InDesign': 'illustrator',
+    'Scribus': 'illustrator',
+    'Figma': 'figma'
+  };
+  
+  return techMap[techName] || 'html5';
+}
+
+const sizes = {
+  xs: 'fa-xs',
+  sm: 'fa-sm',
+  md: '',
+  lg: 'fa-lg',
+  xl: 'fa-xl',
+  '2x': 'fa-2x',
+  '3x': 'fa-3x'
 };
 
-const finalClasses = [
-  'icon',
-  sizeConfig[size] || sizeConfig.md,
-  className
-].filter(Boolean).join(' ');
-
-const faIconName = iconMap[name] || 'fas fa-code';
-const titleText = title || 'Icon: ' + name.charAt(0).toUpperCase() + name.slice(1);
-
+const iconClass = iconos[iconName as keyof typeof iconos] || 'fas fa-question-circle';
+const sizeClass = sizes[size as keyof typeof sizes] || '';
+const finalClass = `${iconClass} ${sizeClass} ${className}`.trim();
 ---
 
-<i class="${faIconName} ${finalClasses}" title="${titleText}" style="${style}" aria-hidden="true"></i>
+<i class={finalClass} title={title} style={style}></i>
