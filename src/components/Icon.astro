@@ -2,6 +2,7 @@
 interface Props {
   name?: string;
   tech?: string;
+  contact?: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2x' | '3x';
   variant?: string;
   class?: string;
@@ -9,45 +10,7 @@ interface Props {
   title?: string;
 }
 
-const { name, tech, size = 'md', variant = 'outline', class: className = '', style = '', title = '' }: Props = Astro.props;
-
-// Determinar qué icono usar
-const iconName = tech ? getIconForTech(tech) : (name || 'html5');
-
-const iconos = {
-  github: 'fab fa-github',
-  linkedin: 'fab fa-linkedin-in',
-  html5: 'fab fa-html5',
-  css3: 'fab fa-css3-alt',
-  javascript: 'fab fa-js',
-  typescript: 'fab fa-js',
-  python: 'fab fa-python',
-  php: 'fab fa-php',
-  sql: 'fas fa-database',
-  react: 'fab fa-react',
-  nodejs: 'fab fa-node-js',
-  express: 'fas fa-server',
-  bootstrap: 'fab fa-bootstrap',
-  vite: 'fas fa-rocket',
-  phaser: 'fas fa-gamepad',
-  vscode: 'fas fa-code',
-  git: 'fab fa-git-alt',
-  npm: 'fab fa-npm',
-  postgresql: 'fas fa-database',
-  mysql: 'fas fa-database',
-  mongodb: 'fas fa-database',
-  vercel: 'fas fa-cloud-arrow-up',
-  netlify: 'fas fa-cloud-arrow-up',
-  'github-pages': 'fab fa-github',
-  docker: 'fab fa-docker',
-  jest: 'fas fa-vial',
-  cypress: 'fas fa-vial',
-  photoshop: 'fas fa-image',
-  illustrator: 'fas fa-pen-nib',
-  premiere: 'fas fa-film',
-  aftereffects: 'fas fa-wand-magic-sparkles',
-  figma: 'fab fa-figma'
-};
+const { name, tech, contact, size = 'md', variant = 'outline', class: className = '', style = '', title = '' }: Props = Astro.props;
 
 // Función para obtener icono según nombre de tecnología
 function getIconForTech(techName: string): string {
@@ -95,6 +58,70 @@ function getIconForTech(techName: string): string {
   return techMap[techName] || 'html5';
 }
 
+// Función para obtener icono según tipo de contacto
+function getIconForContact(contactType: string): string {
+  const contactMap: Record<string, string> = {
+    'email': 'fas fa-envelope',
+    'phone': 'fas fa-phone',
+    'location': 'fas fa-location-dot',
+    'address': 'fas fa-location-dot',
+    'tel': 'fas fa-phone',
+    'mobile': 'fas fa-phone',
+    'map': 'fas fa-map-marker',
+    'marker': 'fas fa-map-marker'
+  };
+  
+  return contactMap[contactType] || 'fas fa-question-circle';
+}
+
+// Iconos de tecnologías
+const iconos = {
+  github: 'fab fa-github',
+  linkedin: 'fab fa-linkedin-in',
+  html5: 'fab fa-html5',
+  css3: 'fab fa-css3-alt',
+  javascript: 'fab fa-js',
+  typescript: 'fab fa-js',
+  python: 'fab fa-python',
+  php: 'fab fa-php',
+  sql: 'fas fa-database',
+  react: 'fab fa-react',
+  nodejs: 'fab fa-node-js',
+  express: 'fas fa-server',
+  bootstrap: 'fab fa-bootstrap',
+  vite: 'fas fa-rocket',
+  phaser: 'fas fa-gamepad',
+  vscode: 'fas fa-code',
+  git: 'fab fa-git-alt',
+  npm: 'fab fa-npm',
+  postgresql: 'fas fa-database',
+  mysql: 'fas fa-database',
+  mongodb: 'fas fa-database',
+  vercel: 'fas fa-cloud-arrow-up',
+  netlify: 'fas fa-cloud-arrow-up',
+  'github-pages': 'fab fa-github',
+  docker: 'fab fa-docker',
+  jest: 'fas fa-vial',
+  cypress: 'fas fa-vial',
+  photoshop: 'fas fa-image',
+  illustrator: 'fas fa-pen-nib',
+  premiere: 'fas fa-film',
+  aftereffects: 'fas fa-wand-magic-sparkles',
+  figma: 'fab fa-figma'
+};
+
+// Determinar qué clase de icono usar
+let finalIconClass: string;
+if (tech) {
+  const iconName = getIconForTech(tech);
+  finalIconClass = iconos[iconName as keyof typeof iconos] || 'fas fa-question-circle';
+} else if (contact) {
+  finalIconClass = getIconForContact(contact);
+} else {
+  const iconName = name || 'html5';
+  finalIconClass = iconos[iconName as keyof typeof iconos] || 'fas fa-question-circle';
+}
+
 const sizes = {
   xs: 'fa-xs',
   sm: 'fa-sm',
@@ -105,9 +132,8 @@ const sizes = {
   '3x': 'fa-3x'
 };
 
-const iconClass = iconos[iconName as keyof typeof iconos] || 'fas fa-question-circle';
 const sizeClass = sizes[size as keyof typeof sizes] || '';
-const finalClass = `${iconClass} ${sizeClass} ${className}`.trim();
+const finalClass = `${finalIconClass} ${sizeClass} ${className}`.trim();
 ---
 
 <i class={finalClass} title={title} style={style}></i>

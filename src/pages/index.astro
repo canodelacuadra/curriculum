@@ -3,7 +3,7 @@ import '../styles/global.css';
 import curriculum from '../data/curriculum.json';
 import Icon from '../components/Icon.astro';
 ---
----
+
 
 <!DOCTYPE html>
 <html lang="es">
@@ -21,82 +21,130 @@ import Icon from '../components/Icon.astro';
             <p>Desarrollador Web & Formador para el Empleo</p>
             <div class="social-icons">
                 <a href={curriculum.redes.github} target="_blank">
-                    <Icon name="github" size="md" />
+                    <Icon name="github" size="xl" />
                 </a>
                 <a href={curriculum.redes.linkedin} target="_blank">
-                    <Icon name="linkedin" size="md" />
+                    <Icon name="linkedin" size="xl" />
                 </a>
             </div>
         </header>
 
-        <main>
-            <section id="formacion">
+       
+
+        <!-- Navegación Tabs -->
+        <nav class="tabs-nav">
+            <a href="#formacion" class="tab-link">Formación</a>
+            <a href="#experiencia" class="tab-link">Experiencia</a>
+            <a href="#tecnologias" class="tab-link">Tecnologías</a>
+        </nav>
+
+        <!-- Contenido Tabs -->
+        <main class="tabs-content">
+             <!-- Resumen Profesional -->
+        <section id = "perfil"class="resumen tab-content default">
+            <h2>Perfil Profesional</h2>
+            <div class="perfil-content">
+                <p class="perfil-texto">
+                    Desarrollador Web con más de 10 años de experiencia en formación ocupacional y universitaria. 
+                    Especializado en tecnologías frontend y backend, con capacidad para diseñar e impartir contenidos formativos 
+                    técnicos adaptados a las necesidades del mercado laboral.
+                </p>
+                <div class="contacto-destacado">
+                    <div class="contacto-item">
+                        <Icon contact="email" size="sm" />
+                        <span>{curriculum.personal.contacto.email}</span>
+                    </div>
+                    <div class="contacto-item">
+                        <Icon contact="phone" size="sm" />
+                        <span>{curriculum.personal.contacto.movil}</span>
+                    </div>
+                    <div class="contacto-item">
+                        <Icon contact="location" size="sm" />
+                        <span>{curriculum.personal.contacto.calle}, {curriculum.personal.contacto.ciudad}</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <!-- Tab Formación -->
+            <section id="formacion" class="tab-content ">
                 <h2>Formación Académica</h2>
                 {curriculum.formacion.map((item) => (
                     <div class="item">
                         <h4>{item.estudios}</h4>
                         <p class="empresa-fecha"><strong>{item.institucion}</strong> - {item.fecha}</p>
-                        {item.observaciones && <p class="descripcion">{item.observaciones}</p>}
-                        {item.duracion && <p class="extras">{item.duracion}</p>}
+                        {item.observaciones && <p class="descripcion">{item.observaciones} </p>}
+                        {item.duracion && <p class="extras">{item.duracion} {item.lugar}</p>}
                     </div>
                 ))}
             </section>
 
-            <section id="experiencia">
+            <!-- Tab Experiencia -->
+            <section id="experiencia" class="tab-content">
                 <h2>Experiencia Profesional</h2>
                 
-                <h3>Formador Ocupacional</h3>
-                {curriculum.experiencia.formadorOcupacional.map((item) => (
-                    <div class="item">
-                        <h4>{item.cargo}</h4>
-                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p class="descripcion">{item.descripcion}</p>
-                        {(item.horas || item.lugar || item.fechaDetallada || item.observaciones) && <p class="extras">{item.horas}{item.horas && ' horas'}{item.horas && (item.lugar || item.fechaDetallada || item.observaciones) && ' | '}{item.lugar}{item.lugar && (item.fechaDetallada || item.observaciones) && ' | '}{item.fechaDetallada}{item.fechaDetallada && item.observaciones && ' | '}{item.observaciones}</p>}
-                    </div>
-                ))}
+                <div class="experiencia-categoria">
+                    <h3>Formador Ocupacional</h3>
+                    {curriculum.experiencia.formadorOcupacional.map((item) => (
+                        <div class="item">
+                            <h4>{item.cargo}</h4>
+                            <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                            <p class="descripcion">{item.descripcion}</p>
+                            {(item.horas || item.lugar || item.fechaDetallada || item.observaciones) && <p class="extras">{item.horas}{item.horas && ' horas'}{item.horas && (item.lugar || item.fechaDetallada || item.observaciones) && ' | '}{item.lugar}{item.lugar && (item.fechaDetallada || item.observaciones) && ' | '}{item.fechaDetallada}{item.fechaDetallada && item.observaciones && ' | '}{item.observaciones}</p>}
+                        </div>
+                    ))}
+                </div>
 
-                <h3>Profesor Universitario</h3>
-                {curriculum.experiencia.profesorUniversitario.map((item) => (
-                    <div class="item">
-                        <h4>{item.cargo}</h4>
-                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p class="descripcion">{item.descripcion}</p>
-                        <p class="extras">{item.duracion} | {item.observaciones}</p>
-                    </div>
-                ))}
+                <div class="experiencia-categoria">
+                    <h3>Profesor Universitario</h3>
+                    {curriculum.experiencia.profesorUniversitario.map((item) => (
+                        <div class="item">
+                            <h4>{item.cargo}</h4>
+                            <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                            <p class="descripcion">{item.descripcion}</p>
+                            <p class="extras">{item.duracion} | {item.observaciones}</p>
+                        </div>
+                    ))}
+                </div>
 
-                <h3>Desarrollo Web</h3>
-                {curriculum.experiencia.desarrolloWeb.map((item) => (
-                    <div class="item">
-                        <h4>{item.cargo}</h4>
-                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p class="descripcion">{item.descripcion}</p>
-                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
-                    </div>
-                ))}
+                <div class="experiencia-categoria">
+                    <h3>Desarrollo Web</h3>
+                    {curriculum.experiencia.desarrolloWeb.map((item) => (
+                        <div class="item">
+                            <h4>{item.cargo}</h4>
+                            <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                            <p class="descripcion">{item.descripcion}</p>
+                            {item.observaciones && <p class="extras">{item.observaciones}</p>}
+                        </div>
+                    ))}
+                </div>
 
-                <h3>Diseño Gráfico</h3>
-                {curriculum.experiencia.disenoGrafico.map((item) => (
-                    <div class="item">
-                        <h4>{item.cargo}</h4>
-                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p class="descripcion">{item.descripcion}</p>
-                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
-                    </div>
-                ))}
+                <div class="experiencia-categoria">
+                    <h3>Diseño Gráfico</h3>
+                    {curriculum.experiencia.disenoGrafico.map((item) => (
+                        <div class="item">
+                            <h4>{item.cargo}</h4>
+                            <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                            <p class="descripcion">{item.descripcion}</p>
+                            {item.observaciones && <p class="extras">{item.observaciones}</p>}
+                        </div>
+                    ))}
+                </div>
 
-                <h3>Producción Audiovisual</h3>
-                {curriculum.experiencia.audiovisual.map((item) => (
-                    <div class="item">
-                        <h4>{item.cargo}</h4>
-                        <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
-                        <p class="descripcion">{item.descripcion}</p>
-                        {item.observaciones && <p class="extras">{item.observaciones}</p>}
-                    </div>
-                ))}
+                <div class="experiencia-categoria">
+                    <h3>Producción Audiovisual</h3>
+                    {curriculum.experiencia.audiovisual.map((item) => (
+                        <div class="item">
+                            <h4>{item.cargo}</h4>
+                            <p class="empresa-fecha"><strong>{item.empresa}</strong> - {item.fecha}</p>
+                            <p class="descripcion">{item.descripcion}</p>
+                            {item.observaciones && <p class="extras">{item.observaciones}</p>}
+                        </div>
+                    ))}
+                </div>
             </section>
 
-            <section id="tecnologias">
+            <!-- Tab Tecnologías -->
+            <section id="tecnologias" class="tab-content">
                 <h2>Tecnologías y Herramientas</h2>
                 <div class="tech-grid">
                     <!-- Lenguajes -->
@@ -185,21 +233,14 @@ import Icon from '../components/Icon.astro';
                     </div>
                 </div>
             </section>
-
-            <section id="contacto">
-                <h2>Contacto</h2>
-                <div class="contact-info">
-                    <p><strong>Ubicación:</strong> {curriculum.personal.contacto.calle}, {curriculum.personal.contacto.ciudad}</p>
-                    <p><strong>Teléfono:</strong> {curriculum.personal.contacto.movil}</p>
-                    <p><strong>Email:</strong> <a href="mailto:{curriculum.personal.contacto.email}">{curriculum.personal.contacto.email}</a></p>
-                    <p><strong>Fecha de nacimiento:</strong> {curriculum.personal.datosNacimiento.fechaNacimiento} | {curriculum.personal.datosNacimiento.lugarNacimiento}</p>
-                </div>
-            </section>
         </main>
 
         <footer>
             <p>&copy; 2026 {curriculum.personal.nombre}. Todos los derechos reservados.</p>
         </footer>
     </div>
+    
+    <!-- Script para tabs con estado active -->
+    <script is:inline src="/scripts/tabs.js"></script>
 </body>
 </html>
