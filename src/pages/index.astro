@@ -22,7 +22,7 @@ import Icon from '../components/Icon.astro';
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="{curriculum.personal.nombre} - Desarrollador Web Full Stack & Formador" />
     <meta property="og:description" content="Desarrollador Web con más de 10 años de experiencia en formación y desarrollo. Especializado en React, Node.js, JavaScript, TypeScript." />
-    <meta property="og:image" content="https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg" />
+    <meta property="og:image" content={`${import.meta.env.SITE}${import.meta.env.BASE_URL}/img/jose-cano.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Foto de {curriculum.personal.nombre}" />
@@ -35,7 +35,7 @@ import Icon from '../components/Icon.astro';
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{curriculum.personal.nombre} - Desarrollador Web Full Stack & Formador" />
     <meta name="twitter:description" content="Desarrollador Web con más de 10 años de experiencia en formación y desarrollo. Especializado en React, Node.js, JavaScript, TypeScript." />
-    <meta name="twitter:image" content="https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg" />
+    <meta name="twitter:image" content={`${import.meta.env.SITE}${import.meta.env.BASE_URL}/img/jose-cano.jpg`} />
     <meta name="twitter:image:alt" content="Foto de {curriculum.personal.nombre}" />
     <meta name="twitter:creator" content="@canodelacuadra" />
     
@@ -54,7 +54,7 @@ import Icon from '../components/Icon.astro';
       "jobTitle": ["Desarrollador Web Full Stack", "Formador Ocupacional", "Profesor"],
       "description": "Desarrollador Web con más de 10 años de experiencia en formación ocupacional y universitaria. Especializado en tecnologías frontend y backend.",
       "url": "https://canodelacuadra.github.io/curriculum/",
-      "image": "https://canodelacuadra.github.io/curriculum/img/jose-cano.jpg",
+      "image": `${import.meta.env.SITE}${import.meta.env.BASE_URL}/img/jose-cano.jpg`,
       "email": "{curriculum.personal.contacto.email}",
       "telephone": "{curriculum.personal.contacto.movil}",
       "address": {
@@ -90,6 +90,9 @@ import Icon from '../components/Icon.astro';
 <body>
     <div class="container">
         <header>
+            <div class="profile-photo">
+                <img src={`${import.meta.env.BASE_URL}${curriculum.personal.foto.src}`} alt={curriculum.personal.foto.alt} />
+            </div>
             <h1>{curriculum.personal.nombre}</h1>
             <p>Desarrollador Web & Formador para el Empleo</p>
             <div class="social-icons">

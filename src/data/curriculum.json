@@ -3,7 +3,7 @@
     "nombre": "José Antonio Cano de la Cuadra",
     "titulo": "Curriculum Vitae",
     "foto": {
-      "src": "img/jose-cano.jpg",
+      "src": "/img/jose-cano.jpg",
       "alt": "Foto de José Antonio Cano"
     },
     "contacto": {

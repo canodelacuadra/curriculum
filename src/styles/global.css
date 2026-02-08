@@ -83,6 +83,82 @@ header {
     box-shadow: var(--shadow-sm);
 }
 
+/* Profile Photo con Efecto Tech */
+.profile-photo {
+    position: relative;
+    margin: 0 auto 1.5rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    box-shadow: 
+        0 0 20px rgba(212, 175, 55, 0.3),
+        inset 0 0 20px rgba(212, 175, 55, 0.1);
+    overflow: hidden;
+    background: var(--color-surface);
+    transition: all var(--transition-fast);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: 
+        sepia(0.3) 
+        contrast(1.1) 
+        brightness(0.95);
+    transition: all var(--transition-fast);
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    border-color: #b8941f;
+    box-shadow: 
+        0 0 30px rgba(212, 175, 55, 0.5),
+        inset 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.profile-photo:hover img {
+    filter: 
+        sepia(0.2) 
+        contrast(1.2) 
+        brightness(1);
+}
+
+/* Efecto Dorado Sutil */
+.profile-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(212, 175, 55, 0.08) 50%, 
+        transparent 70%);
+    animation: gentleShine 4s infinite;
+    pointer-events: none;
+}
+
+.profile-photo::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, 
+        #d4af37, 
+        transparent, 
+        #b8941f);
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: rotate 6s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
 header h1 {
     font-family: 'Share Tech', monospace;
     font-size: 2.5rem;
@@ -551,6 +627,38 @@ section h4 {
     }
 }
 
+@keyframes gentleShine {
+    0%, 85%, 100% {
+        transform: translateX(0);
+        opacity: 0;
+    }
+    87% {
+        transform: translateX(-1px);
+        opacity: 0.4;
+    }
+    89% {
+        transform: translateX(1px);
+        opacity: 0.2;
+    }
+    91% {
+        transform: translateX(-0.5px);
+        opacity: 0.3;
+    }
+    93% {
+        transform: translateX(0.5px);
+        opacity: 0.1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* Categorías de Experiencia */
 .experiencia-categoria {
     margin-bottom: var(--spacing-md);
@@ -585,6 +693,12 @@ footer {
 @media (max-width: 768px) {
     .container {
         padding: var(--spacing-sm);
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 1rem;
     }
 
     header h1 {
@@ -695,6 +809,13 @@ footer {
 @media (max-width: 480px) {
     .tech-items {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .profile-photo {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 0.75rem;
+        border-width: 2px;
     }
     
     header h1 {
