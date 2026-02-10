@@ -359,10 +359,12 @@
   },
     "tecnologias": {
       "desarrolloWeb": {
-      "lenguajes": ["HTML5", "CSS3", "JavaScript","TypeScript", "Python", "PHP", "SQL","HTTP"],
-      "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "Vite","Phaser.js"],
-      "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash","npm"],
-      "aplicacionesWeb": ["WordPress", "Prestashop", "Woocommerce"],
+      "lenguajes": ["HTML5", "CSS3", "JavaScript","TypeScript", "Python", "PHP", "SQL","HTTP","XML","SVG"],
+      "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "Vite","Phaser.js","Aframe","Ar.js","Next.js","Tailwind CSS"],
+      "librerias": ["Leaflet", "jQuery", "Reveal.js", "Three.js", "Chart.js"],
+      "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash","YAML","WezTerm","GitHub Actions","npm"],
+      "aplicacionesWeb": ["WordPress", "WooCommerce", "Shopify", "Prestashop"],
+      "cms": ["Joomla", "Drupal"],
       "apis": ["Google Maps", "APIs HTML5 JavaScript", "YouTube", "REST APIs", "GraphQL"],
       "baseDatos": ["PostgreSQL", "MySQL", "MongoDB"],
       "despliegue": ["Vercel", "Netlify", "GitHub Pages", "Docker"],
@@ -371,8 +373,8 @@
       "ia": ["Gemini", "ChatGPT", "OpenCode"]
     },
     "expresionAudiovisual": {
-      "imagenRaster": ["Photoshop", "Gimp", "Pixlr", "Figma"],
-      "imagenVectorial": ["Adobe Illustrator", "Corel Draw", "Figma"],
+      "imagenRaster": ["Photoshop", "Gimp", "Figma"],
+      "imagenVectorial": ["Adobe Illustrator", "Inkscape"],
       "maquetacion": ["Adobe InDesign", "Scribus"],
       "video": ["Adobe Premiere", "After Effects"]
     }

@@ -237,6 +237,19 @@ import Icon from '../components/Icon.astro';
                         </div>
                     </div>
 
+                    <!-- Librerías -->
+                    <div class="tech-category">
+                        <h3>Librerías</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.librerias.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <!-- Frameworks -->
                     <div class="tech-category">
                         <h3>Frameworks</h3>
@@ -263,11 +276,89 @@ import Icon from '../components/Icon.astro';
                         </div>
                     </div>
 
+                    <!-- Aplicaciones Web -->
+                    <div class="tech-category">
+                        <h3>Aplicaciones Web</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.aplicacionesWeb.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- CMS -->
+                    <div class="tech-category">
+                        <h3>CMS</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.cms.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
                     <!-- Bases de Datos -->
                     <div class="tech-category">
                         <h3>Bases de Datos</h3>
                         <div class="tech-items">
                             {curriculum.tecnologias.desarrolloWeb.baseDatos.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Despliegue -->
+                    <div class="tech-category">
+                        <h3>Despliegue</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.despliegue.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Testing -->
+                    <div class="tech-category">
+                        <h3>Testing</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.testing.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- Seguridad -->
+                    <div class="tech-category">
+                        <h3>Seguridad</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.seguridad.map((tech) => (
+                                <div class="tech-item">
+                                    <Icon tech={tech} size="md" />
+                                    <span>{tech}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <!-- IA -->
+                    <div class="tech-category">
+                        <h3>Inteligencia Artificial</h3>
+                        <div class="tech-items">
+                            {curriculum.tecnologias.desarrolloWeb.ia.map((tech) => (
                                 <div class="tech-item">
                                     <Icon tech={tech} size="md" />
                                     <span>{tech}</span>
