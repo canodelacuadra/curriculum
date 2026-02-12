@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (Local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+        "apiKey": "ollama"
+      },
+      "models": {
+        "codellama:latest": {
+          "name": "CodeLlama 7B (Local)"
+        },
+        "llama3:latest": {
+          "name": "Llama 3 8B (Local)"
+        }
+      }
+    },
+    "big-pickle": {
+      "npm": "@ai-sdk/openai-compatible", 
+      "name": "Big Pickle (Cloud)",
+      "options": {
+        "baseURL": "https://api.opencode.ai/v1"
+      },
+      "models": {
+        "big-pickle": {
+          "name": "Big Pickle (200K context)"
+        }
+      }
+    }
+  },
+  "model": "ollama/codellama:latest",
+  "small_model": "ollama/codellama:latest"
+}

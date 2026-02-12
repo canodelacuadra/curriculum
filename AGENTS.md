@@ -6,6 +6,8 @@
 **Idioma:** Español
 **Deploy:** GitHub Pages
 **Módulos:** ESM (`"type": "module"`)
+**Proyecto:** CV Personal (José Antonio Cano de la Cuadra)
+**Dependencias:** Astro + FontAwesome
 
 ---
 
@@ -183,4 +185,4 @@ Extensión recomendada: `astro-build.astro-vscode`
 
 ---
 
-*Última actualización: Febrero 2026*
+*Última actualización: 12 de Febrero de 2026*
