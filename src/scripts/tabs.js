@@ -6,14 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateActiveTab() {
     const hash = window.location.hash || '#formacion';
     
-    // Actualizar estado active en los enlaces de navegación
+    // Actualizar estado active en los enlaces de navegación y atributos ARIA
     tabLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === hash);
+      const isActive = link.getAttribute('href') === hash;
+      link.classList.toggle('active', isActive);
+      link.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      link.setAttribute('tabindex', isActive ? '0' : '-1');
     });
     
-    // Actualizar visibilidad del contenido
+    // Actualizar visibilidad del contenido y atributos ARIA de los paneles
     tabContents.forEach(content => {
-      content.style.display = content.id === hash.slice(1) ? 'block' : 'none';
+      const isCurrent = content.id === hash.slice(1);
+      content.style.display = isCurrent ? 'block' : 'none';
+      content.setAttribute('aria-hidden', isCurrent ? 'false' : 'true');
     });
   }
   

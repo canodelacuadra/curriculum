@@ -2,6 +2,43 @@
 import '../styles/global.css';
 import curriculum from '../data/curriculum.json';
 import Icon from '../components/Icon.astro';
+
+const schemaPerson = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: curriculum.personal.nombre,
+  jobTitle: ["Desarrollador Web Full Stack", "Formador Ocupacional", "Profesor"],
+  description: "Desarrollador Web con más de 10 años de experiencia en formación ocupacional y universitaria. Especializado en tecnologías frontend y backend.",
+  url: "https://canodelacuadra.github.io/curriculum/",
+  image: `${import.meta.env.SITE}${import.meta.env.BASE_URL}${curriculum.personal.foto.src}`,
+  email: curriculum.personal.contacto.email,
+  telephone: curriculum.personal.contacto.movil,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: curriculum.personal.contacto.calle,
+    addressLocality: curriculum.personal.contacto.ciudad,
+    addressCountry: "ES"
+  },
+  knowsAbout: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Node.js", "Express.js", "PHP", "MySQL", "MongoDB", "Python"],
+  sameAs: [
+    curriculum.redes.github,
+    curriculum.redes.linkedin
+  ],
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "Universidad Complutense de Madrid"
+  },
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "Grupo CDM-Alcorcón"
+    },
+    {
+      "@type": "Organization",
+      name: "Grupo Aspasia-Adalid"
+    }
+  ]
+};
 ---
 
 
@@ -47,42 +84,7 @@ import Icon from '../components/Icon.astro';
     
     <!-- Structured Data JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "{curriculum.personal.nombre}",
-      "jobTitle": ["Desarrollador Web Full Stack", "Formador Ocupacional", "Profesor"],
-      "description": "Desarrollador Web con más de 10 años de experiencia en formación ocupacional y universitaria. Especializado en tecnologías frontend y backend.",
-      "url": "https://canodelacuadra.github.io/curriculum/",
-      "image": `${import.meta.env.SITE}${import.meta.env.BASE_URL}/img/jose-cano.jpg`,
-      "email": "{curriculum.personal.contacto.email}",
-      "telephone": "{curriculum.personal.contacto.movil}",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "{curriculum.personal.contacto.calle}",
-        "addressLocality": "{curriculum.personal.contacto.ciudad}",
-        "addressCountry": "ES"
-      },
-      "knowsAbout": ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Node.js", "Express.js", "PHP", "MySQL", "MongoDB", "Python"],
-      "sameAs": [
-        "{curriculum.redes.github}",
-        "{curriculum.redes.linkedin}"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Universidad Complutense de Madrid"
-      },
-      "worksFor": [
-        {
-          "@type": "Organization",
-          "name": "Grupo CDM-Alcorcón"
-        },
-        {
-          "@type": "Organization", 
-          "name": "Grupo Aspasia-Adalid"
-        }
-      ]
-    }
+    {JSON.stringify(schemaPerson)}
     </script>
     <link rel="shortcut icon" href={`${import.meta.env.BASE_URL}img/icon.png`} type="image/png">
     
@@ -97,10 +99,10 @@ import Icon from '../components/Icon.astro';
             <h1>{curriculum.personal.nombre}</h1>
             <p>Desarrollador Web & Formador para el Empleo</p>
             <div class="social-icons">
-                <a href={curriculum.redes.github} target="_blank">
+                <a href={curriculum.redes.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <Icon name="github" size="xl" />
                 </a>
-                <a href={curriculum.redes.linkedin} target="_blank">
+                <a href={curriculum.redes.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <Icon name="linkedin" size="xl" />
                 </a>
             </div>
@@ -109,16 +111,16 @@ import Icon from '../components/Icon.astro';
        
 
         <!-- Navegación Tabs -->
-        <nav class="tabs-nav">
-            <a href="#formacion" class="tab-link">Formación</a>
-            <a href="#experiencia" class="tab-link">Experiencia</a>
-            <a href="#tecnologias" class="tab-link">Tecnologías</a>
+        <nav class="tabs-nav" role="tablist">
+            <a href="#formacion" class="tab-link" id="tab-formacion" role="tab" aria-controls="formacion" aria-selected="false">Formación</a>
+            <a href="#experiencia" class="tab-link" id="tab-experiencia" role="tab" aria-controls="experiencia" aria-selected="false">Experiencia</a>
+            <a href="#tecnologias" class="tab-link" id="tab-tecnologias" role="tab" aria-controls="tecnologias" aria-selected="false">Tecnologías</a>
         </nav>
 
         <!-- Contenido Tabs -->
         <main class="tabs-content">
              <!-- Resumen Profesional -->
-        <section id = "perfil"class="resumen tab-content default">
+        <section id="perfil" class="resumen">
             <h2>Perfil Profesional</h2>
             <div class="perfil-content">
                 <p class="perfil-texto">
@@ -143,7 +145,7 @@ import Icon from '../components/Icon.astro';
             </div>
         </section>
             <!-- Tab Formación -->
-            <section id="formacion" class="tab-content ">
+            <section id="formacion" class="tab-content" role="tabpanel" aria-labelledby="tab-formacion">
                 <h2>Formación Académica</h2>
                 {curriculum.formacion.map((item) => (
                     <div class="item">
@@ -156,7 +158,7 @@ import Icon from '../components/Icon.astro';
             </section>
 
             <!-- Tab Experiencia -->
-            <section id="experiencia" class="tab-content">
+            <section id="experiencia" class="tab-content" role="tabpanel" aria-labelledby="tab-experiencia">
                 <h2>Experiencia Profesional</h2>
                 
                 <div class="experiencia-categoria">
@@ -221,7 +223,7 @@ import Icon from '../components/Icon.astro';
             </section>
 
             <!-- Tab Tecnologías -->
-            <section id="tecnologias" class="tab-content">
+            <section id="tecnologias" class="tab-content" role="tabpanel" aria-labelledby="tab-tecnologias">
                 <h2>Tecnologías y Herramientas</h2>
                 <div class="tech-grid">
                     <!-- Lenguajes -->
@@ -375,22 +377,6 @@ import Icon from '../components/Icon.astro';
                                 ...curriculum.tecnologias.expresionAudiovisual.imagenRaster,
                                 ...curriculum.tecnologias.expresionAudiovisual.imagenVectorial,
                                 ...curriculum.tecnologias.expresionAudiovisual.video
-                            ].map((tech) => (
-                                <div class="tech-item">
-                                    <Icon tech={tech} size="md" />
-                                    <span>{tech}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    <!-- Despliegue & Testing -->
-                    <div class="tech-category">
-                        <h3>Despliegue & Testing</h3>
-                        <div class="tech-items">
-                            {[
-                                ...curriculum.tecnologias.desarrolloWeb.despliegue,
-                                ...curriculum.tecnologias.desarrolloWeb.testing
                             ].map((tech) => (
                                 <div class="tech-item">
                                     <Icon tech={tech} size="md" />
