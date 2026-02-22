@@ -362,7 +362,7 @@
       "lenguajes": ["HTML5", "CSS3", "JavaScript","TypeScript", "Python", "PHP", "SQL","HTTP","XML","SVG"],
       "frameworks": ["React", "Node.js", "Express.js", "Bootstrap", "Vite","Phaser.js","Aframe","Ar.js","Next.js","Tailwind CSS"],
       "librerias": ["Leaflet", "jQuery", "Reveal.js", "Three.js", "Chart.js"],
-      "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash","YAML","WezTerm","GitHub Actions","npm"],
+      "herramientas": ["VS Code", "Git", "GitHub", "Terminal/Git Bash", "YAML", "WezTerm", "GitHub Actions", "npm", "JSDoc", "ESLint", "Prettier", "Postman", "WSL"],
       "aplicacionesWeb": ["WordPress", "WooCommerce", "Shopify", "Prestashop"],
       "cms": ["Joomla", "Drupal"],
       "apis": ["Google Maps", "APIs HTML5 JavaScript", "YouTube", "REST APIs", "GraphQL"],
@@ -370,7 +370,7 @@
       "despliegue": ["Vercel", "Netlify", "GitHub Pages", "Docker"],
       "testing": ["Jest", "Cypress"],
       "seguridad": ["JWT", "OAuth", "HTTPS", "CORS"],
-      "ia": ["Gemini", "ChatGPT", "OpenCode"]
+      "ia": ["Gemini", "ChatGPT", "OpenCode", "GitHub Copilot", "Cursor"]
     },
     "expresionAudiovisual": {
       "imagenRaster": ["Photoshop", "Gimp", "Figma"],
